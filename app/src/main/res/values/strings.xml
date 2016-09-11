@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MOBOX</string>
+    <string name="curent_time">Текущее время - </string>
 </resources>

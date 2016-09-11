@@ -29,6 +29,11 @@ public class SecondActivity extends AppCompatActivity {
         SecondActivityBinding binding= DataBindingUtil.setContentView(this, R.layout.second_activity);
         if(getIntent().hasExtra("imagedata"))
             binding.setImage((ImageData) (getIntent().getExtras().getParcelable("imagedata")));
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         initReceiver();
     }
 

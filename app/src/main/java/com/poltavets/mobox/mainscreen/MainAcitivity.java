@@ -50,8 +50,14 @@ public class MainAcitivity extends AppCompatActivity implements SwipeRefreshLayo
         startService(new Intent(getBaseContext(), TimeDialogService.class));
         initViews();
         loadData();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         initReceiver();
     }
+
     private void initViews(){
         refreshLayout = (SwipeRefreshLayout) findViewById(R.id.main_refreshlayout);
         refreshLayout.setOnRefreshListener(this);
